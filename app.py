@@ -16,3 +16,5 @@ if hist_button:
 
     #Plotando o histograma
     st.plotly_chart(fig, use_container_width=True)
+
+print("oi")
