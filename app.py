@@ -5,7 +5,7 @@ from time import sleep
 
 car_data = pd.read_csv('vehicles.csv')
 
-st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )~
+st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )
 
 #Esperando que o Usário escolha uma resposta
 question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", ["Selecione sua resposta","sim", "não"])
