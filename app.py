@@ -4,6 +4,8 @@ import plotly.express as px
 
 car_data = pd.read_csv('vehicles.csv')
 
+st.header("Analise Exploratória dos valores de carros dos USA")
+
 hist_button = st.button('Criar um Histogram?')
 
 if hist_button:
@@ -17,4 +19,3 @@ if hist_button:
     #Plotando o histograma
     st.plotly_chart(fig, use_container_width=True)
 
-print("oi")
