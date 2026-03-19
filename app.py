@@ -9,7 +9,7 @@ st.header("Analise Exploratória dos valores de carros dos USA", text_alignment 
 
 question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", [" ","sim", "não"])
 
-if " " in question_box:~
+if " " in question_box:
     sleep(99999999999999999999999999999999999999)
 
 if "sim" in question_box:
