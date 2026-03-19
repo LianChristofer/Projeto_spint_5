@@ -5,16 +5,17 @@ from time import sleep
 
 car_data = pd.read_csv('vehicles.csv')
 
-st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )
+st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )~
 
-question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", [" ","sim", "não"])
-
-if " " in question_box:
-    sleep(99999999999999999999999999999999999999)
+#Esperando que o Usário escolha uma resposta
+question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", ["Selecione sua resposta","sim", "não"])
 
 if "sim" in question_box:
     #Dando as escolhas possiveis
-    choices = st.selectbox("Quais gráficos quer ver?", ["hist", "scatter", "both"])
+    choices = st.selectbox("Quais gráficos quer ver?", ["Selecione sua resposta","hist", "scatter", "both"])
+
+    #Esperando que o Usário escolha uma resposta
+    if "Selecione sua resposta" in choices:
 
     #SE escolher his, plora um hist, e se escolher both tabm
     if "hist" in choices or "both" in choices:
