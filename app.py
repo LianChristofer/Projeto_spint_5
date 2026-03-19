@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from time import sleep
 
 car_data = pd.read_csv('vehicles.csv')
 
 st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )
 
-question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", ["sim", "não"])
+question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", [" ","sim", "não"])
+
+if " " in question_box:~
+    sleep(99999999999999999999999999999999999999)
 
 if "sim" in question_box:
     #Dando as escolhas possiveis
