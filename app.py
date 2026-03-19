@@ -9,44 +9,21 @@ st.header("Analise Exploratória dos valores de carros dos USA", text_alignment 
 hist_button = st.button('Gostaria de analiser estatisticas de carro?')
 
 if hist_button:
+    #Dando as escolhas possiveis
+    choices = st.multiselect("Quais gráficos quer ver?", ["hist", "scatter", "both"])
 
-    question_box = st.checkbox(["his", "scatter", "both"])
-
-    if "his" in question_box:
-        #Criando uma msg
+    #SE escolher his, plora um hist, e se escolher both tabm
+    if "hist" in choices or "both" in choices:
         st.write("Criando um Histograma...")
-
-        #Criando um Histograma
-        fig = px.histogram(car_data, x='odometer', y="price", nbins=100)
-
-        #Plotando o histograma
+        fig = px.histogram(car_data, x="odometer", y="price", nbins=100)
         st.plotly_chart(fig, use_container_width=True)
 
-    if "scatter" in question_box:
-        #Criando uma msg
-        st.write("Criando um grafico de dispeção...")
-
-        #Criando um Histograma
-        fig1 = px.scatter(car_data, x='odometer', y="price")
-
-        #Plotando o histograma
+    #SE escolher scatter, plota o sctter, e se esocolher both tbm
+    if "scatter" in choices or "both" in choices:
+        st.write("Criando um gráfico de dispersão...")
+        fig1 = px.scatter(car_data, x="odometer", y="price")
         st.plotly_chart(fig1, use_container_width=True)
 
-    if "both" in question_box:
-        #Criando uma msg
-        st.write("Criando os gráficos...")
-
-        #Criando um Histograma
-        fig = px.histogram(car_data, x='odometer', y="price", nbins=100)
-
-        #Plotando o histograma
-        st.plotly_chart(fig, use_container_width=True)
-
-        #Criando um grafico de disperção
-        fig1 = px.scatter(car_data, x='odometer', y="price")
-
-        #Plotando o grafico
-        st.plotly_chart(fig1, use_container_width=True)
 
     
 
