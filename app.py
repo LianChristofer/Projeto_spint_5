@@ -6,11 +6,11 @@ car_data = pd.read_csv('vehicles.csv')
 
 st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )
 
-question_box = st.radio("Gostaria de analisar estatísticas de carro?", ["sim", "não"])
+question_box = st.selectbox("Gostaria de analisar estatísticas de carro?", ["sim", "não"])
 
 if "sim" in question_box:
     #Dando as escolhas possiveis
-    choices = st.radio("Quais gráficos quer ver?", ["hist", "scatter", "both"])
+    choices = st.selectbox("Quais gráficos quer ver?", ["hist", "scatter", "both"])
 
     #SE escolher his, plora um hist, e se escolher both tabm
     if "hist" in choices or "both" in choices:
