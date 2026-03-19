@@ -6,9 +6,9 @@ car_data = pd.read_csv('vehicles.csv')
 
 st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )
 
-hist_button = st.button('Gostaria de analiser estatisticas de carro?')
+question_box = st.multiselect('Gostaria de analiser estatisticas de carro?', ["sim", "não"])
 
-if hist_button:
+if "sim" in question_box:
     #Dando as escolhas possiveis
     choices = st.multiselect("Quais gráficos quer ver?", ["hist", "scatter", "both"])
 
@@ -23,6 +23,9 @@ if hist_button:
         st.write("Criando um gráfico de dispersão...")
         fig1 = px.scatter(car_data, x="odometer", y="price")
         st.plotly_chart(fig1, use_container_width=True)
+
+if "não" in question_box:
+    print("Obrigado pela visita, tenha um bom dia")
 
 
     
