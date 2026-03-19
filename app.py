@@ -4,7 +4,7 @@ import plotly.express as px
 
 car_data = pd.read_csv('vehicles.csv')
 
-st.header("Analise Exploratória dos valores de carros dos USA")
+st.header("Analise Exploratória dos valores de carros dos USA", text_alignment = 'center' )
 
 hist_button = st.button('Criar um Histogram?')
 
