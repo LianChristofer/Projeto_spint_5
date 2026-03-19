@@ -16,7 +16,8 @@ if "sim" in question_box:
 
     #Esperando que o Usário escolha uma resposta
     if "Selecione sua resposta" in choices:
-
+        st.write(" ")
+                
     #SE escolher his, plora um hist, e se escolher both tabm
     if "hist" in choices or "both" in choices:
         st.write("Criando um Histograma...")
